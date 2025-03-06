@@ -3,39 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaos13's Portfolio</title>
+    <title>Tetris Game</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-color: black;
             text-align: center;
-            margin: 50px;
-            background-color: #1e1e1e;
             color: white;
+            font-family: Arial, sans-serif;
         }
-        h1 {
-            color: #ffcc00;
-        }
-        a {
-            color: #00ffcc;
-            text-decoration: none;
-            font-size: 20px;
-            display: inline-block;
+        canvas {
+            border: 2px solid white;
             margin-top: 20px;
-            padding: 10px 20px;
-            border: 2px solid #00ffcc;
-            border-radius: 5px;
         }
-        a:hover {
-            background-color: #00ffcc;
-            color: black;
+        #gameover {
+            display: none;
+            color: red;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        #finalscore {
+            font-size: 20px;
+            color: white;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Chaos13's Portfolio</h1>
-    <p>This is a simple webpage to showcase my projects.</p>
-    <h2>My Tetris Game</h2>
-    <p>Download and play my Tetris game:</p>
-    <a href="tetris.exe" download>Download Tetris Game</a>
+
+    <h1>TETRIS</h1>
+    <p id="score">Score: 0</p>
+    <canvas id="tetris" width="300" height="600"></canvas>
+    <p id="gameover">GAME OVER! <br> Press ENTER to Restart</p>
+    <p id="finalscore"></p>
+
+    <script src="tetris.js"></script>
+
 </body>
 </html>
